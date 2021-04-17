@@ -56,15 +56,63 @@
 		041DB4FF262B128800ABE12C /* CalculatorUpDown */ = {
 			isa = PBXGroup;
 			children = (
-				041DB500262B128800ABE12C /* AppDelegate.swift */,
-				041DB502262B128800ABE12C /* SceneDelegate.swift */,
-				041DB504262B128800ABE12C /* ViewController.swift */,
-				041DB506262B128800ABE12C /* Main.storyboard */,
-				041DB509262B128C00ABE12C /* Assets.xcassets */,
-				041DB50B262B128C00ABE12C /* LaunchScreen.storyboard */,
-				041DB50E262B128C00ABE12C /* Info.plist */,
+				041DB522262B177300ABE12C /* Resources */,
+				041DB51D262B173000ABE12C /* Sources */,
 			);
 			path = CalculatorUpDown;
+			sourceTree = "<group>";
+		};
+		041DB51D262B173000ABE12C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				041DB51F262B175400ABE12C /* App */,
+				041DB51E262B174100ABE12C /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		041DB51E262B174100ABE12C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				041DB504262B128800ABE12C /* ViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		041DB51F262B175400ABE12C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				041DB500262B128800ABE12C /* AppDelegate.swift */,
+				041DB502262B128800ABE12C /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		041DB522262B177300ABE12C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				041DB524262B17B500ABE12C /* Configs */,
+				041DB523262B179000ABE12C /* Storyboards */,
+				041DB509262B128C00ABE12C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		041DB523262B179000ABE12C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				041DB506262B128800ABE12C /* Main.storyboard */,
+				041DB50B262B128C00ABE12C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		041DB524262B17B500ABE12C /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				041DB50E262B128C00ABE12C /* Info.plist */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +336,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G32U4R37V2;
-				INFOPLIST_FILE = CalculatorUpDown/Info.plist;
+				INFOPLIST_FILE = CalculatorUpDown/Resources/Configs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MikhailPushkarev.CalculatorUpDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +356,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G32U4R37V2;
-				INFOPLIST_FILE = CalculatorUpDown/Info.plist;
+				INFOPLIST_FILE = CalculatorUpDown/Resources/Configs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MikhailPushkarev.CalculatorUpDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
