@@ -40,24 +40,26 @@ class LayoutIBViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupHierarchy()
-        setupLayout()
         setupView()
     }
 
     // MARK: - Settings
 
-    private func setupHierarchy() {
-
-    }
-
-    private func setupLayout() {
-
-    }
-
     private func setupView() {
-
+        addCornerRadius(for: [
+            divisionButton, multiplyButton, subtractionButton, additionButton, equalityButton,
+            percentButton, nineButton, sixButton, threeButton, commaButton,
+            plusMinusButton, eightButton, fiveButton, twoButton,
+            dischargeButton, sevenButton, fourButton, oneButton,
+            zeroButton
+        ])
     }
 
+    private func addCornerRadius(for buttons: [UIButton]) {
+        buttons.forEach {
+            $0.layer.masksToBounds = true
+            $0.layer.cornerRadius = $0.frame.height / 2
+        }
+    }
 }
 
