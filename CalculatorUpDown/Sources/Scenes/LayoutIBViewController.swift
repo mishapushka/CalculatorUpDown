@@ -9,6 +9,8 @@ import UIKit
 
 class LayoutIBViewController: UIViewController {
 
+    // MARK: - IBOutlet
+
     @IBOutlet var divisionButton: UIButton!
     @IBOutlet var multiplyButton: UIButton!
     @IBOutlet var subtractionButton: UIButton!
@@ -33,12 +35,29 @@ class LayoutIBViewController: UIViewController {
 
     @IBOutlet var zeroButton: UIButton!
 
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupHierarchy()
+        setupLayout()
+        setupView()
     }
 
+    // MARK: - Settings
+
+    private func setupHierarchy() {
+
+    }
+
+    private func setupLayout() {
+
+    }
+
+    private func setupView() {
+
+    }
 
 }
 
