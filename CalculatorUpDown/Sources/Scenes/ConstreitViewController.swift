@@ -78,11 +78,19 @@ class ConstreitViewController: UIViewController {
         view.addSubview(sevenButton)
         view.addSubview(fourButton)
         view.addSubview(oneButton)
-        
+
         view.addSubview(zeroButton)
     }
 
     private func setupLayout() {
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+
+        divisionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        divisionButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        divisionButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 30).isActive = true
 
     }
 
