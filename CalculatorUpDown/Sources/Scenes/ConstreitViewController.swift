@@ -11,7 +11,7 @@ class ConstreitViewController: UIViewController {
 
     private lazy var label: UILabel = {
         var label = UILabel()
-        label.font = .systemFont(ofSize: 70)
+        label.font = .systemFont(ofSize: 70, weight: .light)
         label.textColor = .white
         label.text = "0"
         return label
@@ -86,12 +86,22 @@ class ConstreitViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
 
-        divisionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        divisionButton.translatesAutoresizingMaskIntoConstraints = false
+//        divisionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = false
         divisionButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        divisionButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 30).isActive = true
+//        divisionButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 30).isActive = true
+        divisionButton.widthAnchor.constraint(equalToConstant: 75).isActive = true
+        divisionButton.heightAnchor.constraint(equalToConstant: 75).isActive = true
+        divisionButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
 
+        multiplyButton.translatesAutoresizingMaskIntoConstraints = false
+        multiplyButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        multiplyButton.widthAnchor.constraint(equalToConstant: 75).isActive = true
+        multiplyButton.heightAnchor.constraint(equalToConstant: 75).isActive = true
+        multiplyButton.topAnchor.constraint(equalTo: divisionButton.bottomAnchor, constant: 15).isActive = true
+        multiplyButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
     }
 
     private func setupView() {
