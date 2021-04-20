@@ -18,6 +18,9 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcy-8u-eIZ">
                                 <rect key="frame" x="18" y="267" width="378" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="13g-a6-73b"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -32,6 +35,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="eNu-ME-5I3"/>
                                                     <constraint firstAttribute="width" constant="75" id="fq3-tR-jrV"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -42,6 +46,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Euf-Oa-lqD">
                                                 <rect key="frame" x="90" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="GjY-Cw-9yR"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="+/-">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -52,6 +59,7 @@
                                                 <color key="backgroundColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="9hV-Vr-RqG"/>
+                                                    <constraint firstAttribute="height" constant="75" id="Bfh-xP-7hL"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="%">
@@ -62,6 +70,7 @@
                                                 <rect key="frame" x="270" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" red="0.99215686270000003" green="0.62352941179999999" blue="0.023529411760000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="FlH-Zy-niq"/>
                                                     <constraint firstAttribute="width" constant="75" id="NFY-qn-5ai"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -77,6 +86,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlA-gl-N8H">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="yPj-mC-WQQ"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="7">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,6 +98,7 @@
                                                 <rect key="frame" x="90" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="Nrs-Dv-M7u"/>
                                                     <constraint firstAttribute="width" constant="75" id="fCn-SX-idY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -98,6 +111,7 @@
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="fjL-n0-nf7"/>
+                                                    <constraint firstAttribute="height" constant="75" id="nFS-VL-84n"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="9">
@@ -109,6 +123,7 @@
                                                 <color key="backgroundColor" red="0.99215686270000003" green="0.62352941179999999" blue="0.023529411760000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="GTI-om-Tt4"/>
+                                                    <constraint firstAttribute="height" constant="75" id="bgm-DM-ccc"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="x">
@@ -124,6 +139,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="Cr7-pp-Bn2"/>
                                                     <constraint firstAttribute="width" constant="75" id="tnr-jx-HQo"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -136,6 +152,7 @@
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="uPX-5M-1qc"/>
+                                                    <constraint firstAttribute="height" constant="75" id="ys8-UC-M5R"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="5">
@@ -147,6 +164,7 @@
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="IgF-9f-mGx"/>
+                                                    <constraint firstAttribute="height" constant="75" id="uJq-mj-qey"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="6">
@@ -158,6 +176,7 @@
                                                 <color key="backgroundColor" red="0.99215686270000003" green="0.62352941179999999" blue="0.023529411760000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="8ss-Rs-dZx"/>
+                                                    <constraint firstAttribute="height" constant="75" id="oyz-Aw-Y3j"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="-">
@@ -174,6 +193,7 @@
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="7Fu-4r-7I7"/>
+                                                    <constraint firstAttribute="height" constant="75" id="7r3-so-sg6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="1">
@@ -184,6 +204,7 @@
                                                 <rect key="frame" x="90" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="PRZ-A5-P85"/>
                                                     <constraint firstAttribute="width" constant="75" id="aHi-Fg-MFb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -195,6 +216,7 @@
                                                 <rect key="frame" x="180" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="XHX-qJ-ZdJ"/>
                                                     <constraint firstAttribute="width" constant="75" id="Xbh-RF-Tzk"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -207,6 +229,7 @@
                                                 <color key="backgroundColor" red="0.99215686270000003" green="0.62352941179999999" blue="0.023529411760000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="I6V-Mq-9Ue"/>
+                                                    <constraint firstAttribute="height" constant="75" id="Jcu-0c-tGU"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="+">
@@ -222,6 +245,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="hqp-fD-ayd"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="jab-aI-bZv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -233,6 +257,7 @@
                                                 <rect key="frame" x="180" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="4R4-sz-k5G"/>
                                                     <constraint firstAttribute="width" constant="75" id="qfx-g0-0oZ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -244,6 +269,7 @@
                                                 <rect key="frame" x="270" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" red="0.99215686270000003" green="0.62352941179999999" blue="0.023529411760000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="JA9-3B-vC9"/>
                                                     <constraint firstAttribute="width" constant="75" id="ZlV-eQ-CH1"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -259,14 +285,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Mhg-uX-1VT" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.55" id="2RW-qV-Iu2"/>
                             <constraint firstItem="fcy-8u-eIZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3jy-as-THx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fcy-8u-eIZ" secondAttribute="trailing" constant="18" id="70g-hW-FCg"/>
                             <constraint firstItem="Mhg-uX-1VT" firstAttribute="top" secondItem="fcy-8u-eIZ" secondAttribute="bottom" constant="26" id="JRg-jr-uNL"/>
+                            <constraint firstItem="Mhg-uX-1VT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P6O-kd-DvL"/>
                             <constraint firstItem="fcy-8u-eIZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="PNP-Ba-gIN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mhg-uX-1VT" secondAttribute="bottom" constant="50" id="ZfT-U6-FDt"/>
-                            <constraint firstItem="Mhg-uX-1VT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fA4-wo-Nx3"/>
-                            <constraint firstItem="Mhg-uX-1VT" firstAttribute="height" secondItem="fcy-8u-eIZ" secondAttribute="height" multiplier="5.17857" id="fZg-cu-3pZ"/>
-                            <constraint firstItem="Mhg-uX-1VT" firstAttribute="width" secondItem="fcy-8u-eIZ" secondAttribute="width" multiplier="0.912698" id="vOW-uK-Tgs"/>
                         </constraints>
                     </view>
                     <connections>
