@@ -17,138 +17,29 @@ class ConstreitViewController: UIViewController {
         return label
     }()
 
-    private lazy var divisionButton: UIButton = {
-        var divisionButton = UIButton()
-        divisionButton.setTitle("/", for: .normal)
-        divisionButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return divisionButton
-    }()
+    private lazy var divisionButton = createButton(with: "/", titleColor: .white, backgroundColor: .systemOrange)
+    private lazy var multiplyButton = createButton(with: "x", titleColor: .white, backgroundColor: .systemOrange)
+    private lazy var subtractionButton = createButton(with: "-", titleColor: .white, backgroundColor: .systemOrange)
+    private lazy var additionButton = createButton(with: "+", titleColor: .white, backgroundColor: .systemOrange)
+    private lazy var equalityButton = createButton(with: "=", titleColor: .white, backgroundColor: .systemOrange)
 
-    private lazy var multiplyButton: UIButton = {
-        var multiplyButton = UIButton()
-        multiplyButton.setTitle("x", for: .normal)
-        multiplyButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return multiplyButton
-    }()
+    private lazy var percentButton = createButton(with: "%", titleColor: .black, backgroundColor: .gray)
+    private lazy var nineButton = createButton(with: "9", titleColor: .white, backgroundColor: .darkGray)
+    private lazy var sixButton = createButton(with: "6", titleColor: .white, backgroundColor: .darkGray)
+    private lazy var threeButton = createButton(with: "3", titleColor: .white, backgroundColor: .darkGray)
+    private lazy var commaButton = createButton(with: ",", titleColor: .white, backgroundColor: .darkGray)
 
-    private lazy var subtractionButton: UIButton = {
-        var subtractionButton = UIButton()
-        subtractionButton.setTitle("-", for: .normal)
-        subtractionButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return subtractionButton
-    }()
+    private lazy var plusMinusButton = createButton(with: "+/-", titleColor: .black, backgroundColor: .gray)
+    private lazy var eightButton = createButton(with: "8", titleColor: .white, backgroundColor: .darkGray)
+    private lazy var fiveButton = createButton(with: "5", titleColor: .white, backgroundColor: .darkGray)
+    private lazy var twoButton = createButton(with: "2", titleColor: .white, backgroundColor: .darkGray)
 
-    private lazy var additionButton: UIButton = {
-        var additionButton = UIButton()
-        additionButton.setTitle("+", for: .normal)
-        additionButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return additionButton
-    }()
+    private lazy var dischargeButton = createButton(with: "AC", titleColor: .black, backgroundColor: .gray)
+    private lazy var sevenButton = createButton(with: "7", titleColor: .white, backgroundColor: .darkGray)
+    private lazy var fourButton = createButton(with: "4", titleColor: .white, backgroundColor: .darkGray)
+    private lazy var oneButton = createButton(with: "1", titleColor: .white, backgroundColor: .darkGray)
 
-    private lazy var equalityButton: UIButton = {
-        var equalityButton = UIButton()
-        equalityButton.setTitle("=", for: .normal)
-        equalityButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return equalityButton
-    }()
-
-    private lazy var percentButton: UIButton = {
-        var percentButton = UIButton()
-        percentButton.setTitle("%", for: .normal)
-        percentButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return percentButton
-    }()
-
-    private lazy var nineButton: UIButton = {
-        var nineButton = UIButton()
-        nineButton.setTitle("9", for: .normal)
-        nineButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return nineButton
-    }()
-
-    private lazy var sixButton: UIButton = {
-        var sixButton = UIButton()
-        sixButton.setTitle("6", for: .normal)
-        sixButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return sixButton
-    }()
-
-    private lazy var threeButton: UIButton = {
-        var threeButton = UIButton()
-        threeButton.setTitle("3", for: .normal)
-        threeButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return threeButton
-    }()
-
-    private lazy var commaButton: UIButton = {
-        var commaButton = UIButton()
-        commaButton.setTitle(",", for: .normal)
-        commaButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return commaButton
-    }()
-
-    private lazy var plusMinusButton: UIButton = {
-        var plusMinusButton = UIButton()
-        plusMinusButton.setTitle("+/-", for: .normal)
-        plusMinusButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return plusMinusButton
-    }()
-
-    private lazy var eightButton: UIButton = {
-        var eightButton = UIButton()
-        eightButton.setTitle("9", for: .normal)
-        eightButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return eightButton
-    }()
-
-    private lazy var fiveButton: UIButton = {
-        var fiveButton = UIButton()
-        fiveButton.setTitle("5", for: .normal)
-        fiveButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return fiveButton
-    }()
-
-    private lazy var twoButton: UIButton = {
-        var twoButton = UIButton()
-        twoButton.setTitle("2", for: .normal)
-        twoButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return twoButton
-    }()
-
-    private lazy var dischargeButton: UIButton = {
-        var dischargeButton = UIButton()
-        dischargeButton.setTitle("AC", for: .normal)
-        dischargeButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return dischargeButton
-    }()
-
-    private lazy var sevenButton: UIButton = {
-        var sevenButton = UIButton()
-        sevenButton.setTitle("7", for: .normal)
-        sevenButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return sevenButton
-    }()
-
-    private lazy var fourButton: UIButton = {
-        var fourButton = UIButton()
-        fourButton.setTitle("4", for: .normal)
-        fourButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return fourButton
-    }()
-
-    private lazy var oneButton: UIButton = {
-        var oneButton = UIButton()
-        oneButton.setTitle("1", for: .normal)
-        oneButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return oneButton
-    }()
-
-    private lazy var zeroButton: UIButton = {
-        var zeroButton = UIButton()
-        zeroButton.setTitle("0", for: .normal)
-        zeroButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        return zeroButton
-    }()
+    private lazy var zeroButton = createButton(with: "0", titleColor: .white, backgroundColor: .darkGray)
 
 
     // MARK: - Lifecycle
@@ -165,24 +56,29 @@ class ConstreitViewController: UIViewController {
 
     private func setupHierarchy() {
         view.addSubview(label)
+
         view.addSubview(divisionButton)
         view.addSubview(multiplyButton)
         view.addSubview(subtractionButton)
         view.addSubview(additionButton)
         view.addSubview(equalityButton)
+
         view.addSubview(percentButton)
         view.addSubview(nineButton)
         view.addSubview(sixButton)
         view.addSubview(threeButton)
         view.addSubview(commaButton)
+
         view.addSubview(plusMinusButton)
         view.addSubview(eightButton)
         view.addSubview(fiveButton)
         view.addSubview(twoButton)
+
         view.addSubview(dischargeButton)
         view.addSubview(sevenButton)
         view.addSubview(fourButton)
         view.addSubview(oneButton)
+        
         view.addSubview(zeroButton)
     }
 
@@ -196,11 +92,29 @@ class ConstreitViewController: UIViewController {
     }
 
 
+
+
+    //MARK: - Private functions
+
+    private func createButton(with title: String, titleColor: UIColor, backgroundColor: UIColor) -> UIButton {
+        let button = UIButton(type: .system)
+
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(titleColor, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 30, weight: .light)
+        button.backgroundColor = backgroundColor
+
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 75 / 2
+
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+
+        return button
+    }
+
     // MARK: - Actions
 
     @objc private func buttonAction() {
 
     }
-
-    
 }
