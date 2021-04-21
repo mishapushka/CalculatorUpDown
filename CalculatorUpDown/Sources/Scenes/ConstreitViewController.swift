@@ -11,7 +11,7 @@ class ConstreitViewController: UIViewController {
 
     private lazy var label: UILabel = {
         var label = UILabel()
-        label.font = .systemFont(ofSize: 70, weight: .light)
+        label.font = .systemFont(ofSize: Metric.labelSize, weight: .light)
         label.textColor = .white
         label.text = "0"
         return label
@@ -127,8 +127,8 @@ class ConstreitViewController: UIViewController {
         oneButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.oneColumnRightAnchor).isActive = true
         oneButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.fiveLineBottomAnchor).isActive = true
 
-        zeroButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 53).isActive = true
-        zeroButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -195).isActive = true
+        zeroButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Metric.zeroLeadingAnchor).isActive = true
+        zeroButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: Metric.zeroTrailingAnchor).isActive = true
         zeroButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.sixLineBottomAnchor).isActive = true
     }
 
@@ -147,15 +147,15 @@ class ConstreitViewController: UIViewController {
 
         button.setTitle(title, for: .normal)
         button.setTitleColor(titleColor, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 30, weight: .light)
+        button.titleLabel?.font = .systemFont(ofSize: Metric.titleLabelSize, weight: .light)
         button.backgroundColor = backgroundColor
 
         button.layer.masksToBounds = true
-        button.layer.cornerRadius = 75 / 2
+        button.layer.cornerRadius = Metric.buttonWidth / 2
 
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.widthAnchor.constraint(equalToConstant: 75).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 75).isActive = true
+        button.widthAnchor.constraint(equalToConstant: Metric.buttonWidth).isActive = true
+        button.heightAnchor.constraint(equalToConstant: Metric.buttonHeight).isActive = true
 
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 
@@ -187,5 +187,13 @@ extension ConstreitViewController {
         static let fiveLineBottomAnchor: CGFloat = -140
         static let sixLineBottomAnchor: CGFloat = -50
 
+        static let zeroLeadingAnchor: CGFloat = 53
+        static let zeroTrailingAnchor: CGFloat = -195
+
+        static let buttonWidth: CGFloat = 75
+        static let buttonHeight: CGFloat = 75
+
+        static let labelSize: CGFloat = 70
+        static let titleLabelSize: CGFloat = 30
     }
 }
