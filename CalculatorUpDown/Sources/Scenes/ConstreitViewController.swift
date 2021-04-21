@@ -84,9 +84,11 @@ class ConstreitViewController: UIViewController {
 
     private func setupLayout() {
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true //горизонтальная
+//        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 200).isActive = true
+        label.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+
 
         divisionButton.translatesAutoresizingMaskIntoConstraints = false
 //        divisionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = false
@@ -97,11 +99,40 @@ class ConstreitViewController: UIViewController {
         divisionButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
 
         multiplyButton.translatesAutoresizingMaskIntoConstraints = false
-        multiplyButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+//        multiplyButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         multiplyButton.widthAnchor.constraint(equalToConstant: 75).isActive = true
         multiplyButton.heightAnchor.constraint(equalToConstant: 75).isActive = true
-        multiplyButton.topAnchor.constraint(equalTo: divisionButton.bottomAnchor, constant: 15).isActive = true
+//        multiplyButton.rightAnchor.constraint(equalTo: divisionButton.rightAnchor, constant: 15).isActive = true
         multiplyButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15).isActive = true
+        multiplyButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -290).isActive = true
+
+        dischargeButton.translatesAutoresizingMaskIntoConstraints = false
+        dischargeButton.widthAnchor.constraint(equalToConstant: 75).isActive = true
+        dischargeButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        dischargeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 363).isActive = true
+        dischargeButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15).isActive = true
+
+        plusMinusButton.translatesAutoresizingMaskIntoConstraints = false
+        plusMinusButton.widthAnchor.constraint(equalToConstant: 75).isActive = true
+        plusMinusButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        plusMinusButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 363).isActive = true
+        plusMinusButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 105).isActive = true
+
+        percentButton.translatesAutoresizingMaskIntoConstraints = false
+        percentButton.widthAnchor.constraint(equalToConstant: 75).isActive = true
+        percentButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        percentButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 363).isActive = true
+        percentButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 210).isActive = true
+
+
+        zeroButton.translatesAutoresizingMaskIntoConstraints = false
+        zeroButton.widthAnchor.constraint(equalToConstant: 75).isActive = true
+        zeroButton.heightAnchor.constraint(equalToConstant: 75).isActive = true
+//        zeroButton.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 30).isActive = true
+        zeroButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 18).isActive = true
+        zeroButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -217).isActive = true
+        zeroButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50).isActive = true
+//        zeroButton.heightAnchor.constraint(equalToConstant: 1.0 / 1.0).isActive = true
     }
 
     private func setupView() {
