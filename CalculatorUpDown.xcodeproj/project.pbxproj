@@ -13,7 +13,7 @@
 		041DB508262B128800ABE12C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041DB506262B128800ABE12C /* Main.storyboard */; };
 		041DB50A262B128C00ABE12C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041DB509262B128C00ABE12C /* Assets.xcassets */; };
 		041DB50D262B128C00ABE12C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041DB50B262B128C00ABE12C /* LaunchScreen.storyboard */; };
-		04660E6F262DB811002461D0 /* ConstreitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04660E6E262DB811002461D0 /* ConstreitViewController.swift */; };
+		04660E6F262DB811002461D0 /* ConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04660E6E262DB811002461D0 /* ConstraintViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		041DB509262B128C00ABE12C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		041DB50C262B128C00ABE12C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		041DB50E262B128C00ABE12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04660E6E262DB811002461D0 /* ConstreitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstreitViewController.swift; sourceTree = "<group>"; };
+		04660E6E262DB811002461D0 /* ConstraintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				041DB504262B128800ABE12C /* LayoutIBViewController.swift */,
-				04660E6E262DB811002461D0 /* ConstreitViewController.swift */,
+				04660E6E262DB811002461D0 /* ConstraintViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 			files = (
 				041DB505262B128800ABE12C /* LayoutIBViewController.swift in Sources */,
 				041DB501262B128800ABE12C /* AppDelegate.swift in Sources */,
-				04660E6F262DB811002461D0 /* ConstreitViewController.swift in Sources */,
+				04660E6F262DB811002461D0 /* ConstraintViewController.swift in Sources */,
 				041DB503262B128800ABE12C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
