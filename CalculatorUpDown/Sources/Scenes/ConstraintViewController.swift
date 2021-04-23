@@ -191,3 +191,10 @@ extension ConstraintViewController {
         static let titleLabelSize: CGFloat = 30
     }
 }
+
+extension UIView {
+    func adjustConstrait(to view: UIView, attributes: (right: CGFloat, bottom: CGFloat, leading: CGFloat,
+                                                       trailing: CGFloat) = (0, 0, 0, 0)) -> [NSLayoutConstraint] {
+return [NSLayoutConstraint()]
+    }
+}
