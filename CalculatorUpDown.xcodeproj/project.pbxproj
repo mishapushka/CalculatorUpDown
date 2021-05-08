@@ -69,6 +69,7 @@
 		041DB51D262B173000ABE12C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				04CFCB702646445E00172252 /* Common */,
 				041DB51F262B175400ABE12C /* App */,
 				041DB51E262B174100ABE12C /* Scenes */,
 			);
@@ -78,7 +79,6 @@
 		041DB51E262B174100ABE12C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				04CFCB6D2645B0FA00172252 /* UIView+Ext.swift */,
 				041DB504262B128800ABE12C /* LayoutIBViewController.swift */,
 				04660E6E262DB811002461D0 /* ConstraitViewController.swift */,
 			);
@@ -119,6 +119,14 @@
 				041DB50E262B128C00ABE12C /* Info.plist */,
 			);
 			path = Configs;
+			sourceTree = "<group>";
+		};
+		04CFCB702646445E00172252 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				04CFCB6D2645B0FA00172252 /* UIView+Ext.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -22,6 +22,8 @@ extension UIView {
         left: NSLayoutXAxisAnchor? = nil, paddingLeft: CGFloat = 0,
         right: NSLayoutXAxisAnchor? = nil, paddingRight: CGFloat = 0,
         bottom: NSLayoutYAxisAnchor? = nil, paddingBottom: CGFloat = 0,
+        leading: NSLayoutXAxisAnchor? = nil, paddingLeading: CGFloat = 0,
+        trailing: NSLayoutXAxisAnchor? = nil, paddingTrailing: CGFloat = 0,
         width: CGFloat = 0, height: CGFloat = 0
     ) {
         translatesAutoresizingMaskIntoConstraints = false
@@ -41,7 +43,7 @@ extension UIView {
 
         // Use the left parameter to set the left constarint
         if let left = left {
-            leadingAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
+            leftAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
         }
 
         // Use the bottom parameter to set the bottom constarint
@@ -49,9 +51,17 @@ extension UIView {
             bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom).isActive = true
         }
 
+        if let leading = leading {
+            leadingAnchor.constraint(equalTo: leading, constant: -paddingLeading).isActive = true
+        }
+
+        if let trailing = trailing {
+            trailingAnchor.constraint(equalTo: trailing, constraint: -paddingTrailing).isActive = true
+        }
+
         // Use the right parameter to set the right constarint
         if let right = right {
-            trailingAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
+            rightAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
         }
         
         // Use the width parameter to set the top constarint

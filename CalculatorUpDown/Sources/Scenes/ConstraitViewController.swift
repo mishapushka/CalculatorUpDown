@@ -14,7 +14,6 @@ class ConstraintViewController: UIViewController {
         label.font = .systemFont(ofSize: Metric.labelSize, weight: .light)
         label.textColor = .white
         label.text = "0"
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
@@ -70,52 +69,55 @@ class ConstraintViewController: UIViewController {
     }
 
     private func setupLayout() {
-        label.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.fourColumnRightAnchor).isActive = true
-        label.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.oneLineBottomAnchor).isActive = true
+        label.addConstraints(right: view.rightAnchor, paddingRight: Metric.fourColumnRightAnchor,
+                             bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.oneLineBottomAnchor)
 
-        divisionButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.fourColumnRightAnchor).isActive = true
-        divisionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.twoLineBottomAnchor).isActive = true
-        multiplyButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.fourColumnRightAnchor).isActive = true
-        multiplyButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.threeLineBottomAnchor).isActive = true
-        subtractionButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.fourColumnRightAnchor).isActive = true
-        subtractionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.fourLineBottomAnchor).isActive = true
-        additionButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.fourColumnRightAnchor).isActive = true
-        additionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.fiveLineBottomAnchor).isActive = true
-        equalityButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.fourColumnRightAnchor).isActive = true
-        equalityButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.sixLineBottomAnchor).isActive = true
+        divisionButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.fourColumnRightAnchor,
+                                      bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.twoLineBottomAnchor)
+        multiplyButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.fourColumnRightAnchor,
+                                      bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.threeLineBottomAnchor)
+        subtractionButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.fourColumnRightAnchor,
+                                         bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.fourLineBottomAnchor)
+        additionButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.fourColumnRightAnchor,
+                                      bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.fiveLineBottomAnchor)
+        equalityButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.fourColumnRightAnchor,
+                                      bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.sixLineBottomAnchor)
 
-        percentButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.threeColumnRightAnchor).isActive = true
-        percentButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.twoLineBottomAnchor).isActive = true
-        nineButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.threeColumnRightAnchor).isActive = true
-        nineButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.threeLineBottomAnchor).isActive = true
-        sixButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.threeColumnRightAnchor).isActive = true
-        sixButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.fourLineBottomAnchor).isActive = true
-        threeButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.threeColumnRightAnchor).isActive = true
-        threeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.fiveLineBottomAnchor).isActive = true
-        commaButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.threeColumnRightAnchor).isActive = true
-        commaButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.sixLineBottomAnchor).isActive = true
+        percentButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.threeColumnRightAnchor,
+                                     bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.twoLineBottomAnchor)
+        nineButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.threeColumnRightAnchor,
+                                  bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.threeLineBottomAnchor)
+        sixButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.threeColumnRightAnchor,
+                                 bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.fourLineBottomAnchor)
+        threeButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.threeColumnRightAnchor,
+                                   bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.fiveLineBottomAnchor)
+        commaButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.threeColumnRightAnchor,
+                                   bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.sixLineBottomAnchor)
 
-        plusMinusButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.twoColumnRightAnchor).isActive = true
-        plusMinusButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.twoLineBottomAnchor).isActive = true
-        eightButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.twoColumnRightAnchor).isActive = true
-        eightButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.threeLineBottomAnchor).isActive = true
-        fiveButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.twoColumnRightAnchor).isActive = true
-        fiveButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.fourLineBottomAnchor).isActive = true
-        twoButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.twoColumnRightAnchor).isActive = true
-        twoButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.fiveLineBottomAnchor).isActive = true
+        plusMinusButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.twoColumnRightAnchor,
+                                       bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.twoLineBottomAnchor)
+        eightButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.twoColumnRightAnchor,
+                                   bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.threeLineBottomAnchor)
+        fiveButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.twoColumnRightAnchor,
+                                  bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.fourLineBottomAnchor)
+        twoButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.twoColumnRightAnchor,
+                                 bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.fiveLineBottomAnchor)
 
-        dischargeButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.oneColumnRightAnchor).isActive = true
-        dischargeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.twoLineBottomAnchor).isActive = true
-        sevenButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.oneColumnRightAnchor).isActive = true
-        sevenButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.threeLineBottomAnchor).isActive = true
-        fourButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.oneColumnRightAnchor).isActive = true
-        fourButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.fourLineBottomAnchor).isActive = true
-        oneButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.oneColumnRightAnchor).isActive = true
-        oneButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.fiveLineBottomAnchor).isActive = true
+        dischargeButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.oneColumnRightAnchor,
+                                       bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.twoLineBottomAnchor)
+        sevenButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.oneColumnRightAnchor,
+                                   bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.threeLineBottomAnchor)
+        fourButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.oneColumnRightAnchor,
+                                  bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.fourLineBottomAnchor)
+        oneButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.oneColumnRightAnchor,
+                                 bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.fiveLineBottomAnchor)
 
-        zeroButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Metric.zeroLeadingAnchor).isActive = true
-        zeroButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: Metric.zeroTrailingAnchor).isActive = true
-        zeroButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.sixLineBottomAnchor).isActive = true
+        zeroButton.addConstraints(leading: view.safeAreaLayoutGuide.leadingAnchor, paddingLeading: Metric.zeroLeadingAnchor,
+                                  trailing: view.safeAreaLayoutGuide.trailingAnchor, paddingTrailing: Metric.zeroTrailingAnchor,
+                                  bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.sixLineBottomAnchor)
+//        zeroButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Metric.zeroLeadingAnchor).isActive = true
+//        zeroButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: Metric.zeroTrailingAnchor).isActive = true
+//        zeroButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.sixLineBottomAnchor).isActive = true
     }
 
     private func setupView() {
