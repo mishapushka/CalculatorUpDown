@@ -1,5 +1,5 @@
 //
-//  ConstreitViewController.swift
+//  ConstraintViewController.swift
 //  CalculatorUpDown
 //
 //  Created by mac on 19.04.2021.
@@ -7,40 +7,46 @@
 
 import UIKit
 
-class ConstreitViewController: UIViewController {
+class ConstraintViewController: UIViewController {
 
     private lazy var label: UILabel = {
         var label = UILabel()
         label.font = .systemFont(ofSize: Metric.labelSize, weight: .light)
         label.textColor = .white
         label.text = "0"
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    private lazy var divisionButton = createButton(with: "/", titleColor: .white, backgroundColor: .systemOrange)
-    private lazy var multiplyButton = createButton(with: "x", titleColor: .white, backgroundColor: .systemOrange)
-    private lazy var subtractionButton = createButton(with: "-", titleColor: .white, backgroundColor: .systemOrange)
-    private lazy var additionButton = createButton(with: "+", titleColor: .white, backgroundColor: .systemOrange)
-    private lazy var equalityButton = createButton(with: "=", titleColor: .white, backgroundColor: .systemOrange)
+    private lazy var divisionButton = createButton(with: "/", backgroundColor: .systemOrange)
+    private lazy var multiplyButton = createButton(with: "x", backgroundColor: .systemOrange)
+    private lazy var subtractionButton = createButton(with: "-", backgroundColor: .systemOrange)
+    private lazy var additionButton = createButton(with: "+", backgroundColor: .systemOrange)
+    private lazy var equalityButton = createButton(with: "=", backgroundColor: .systemOrange)
 
-    private lazy var percentButton = createButton(with: "%", titleColor: .black, backgroundColor: .gray)
-    private lazy var nineButton = createButton(with: "9", titleColor: .white, backgroundColor: .darkGray)
-    private lazy var sixButton = createButton(with: "6", titleColor: .white, backgroundColor: .darkGray)
-    private lazy var threeButton = createButton(with: "3", titleColor: .white, backgroundColor: .darkGray)
-    private lazy var commaButton = createButton(with: ",", titleColor: .white, backgroundColor: .darkGray)
+    private lazy var percentButton = createButton(with: "%",
+                                                  titleColor: .black,
+                                                  backgroundColor: .gray)
+    private lazy var nineButton = createButton(with: "9")
+    private lazy var sixButton = createButton(with: "6")
+    private lazy var threeButton = createButton(with: "3")
+    private lazy var commaButton = createButton(with: ",")
 
-    private lazy var plusMinusButton = createButton(with: "+/-", titleColor: .black, backgroundColor: .gray)
-    private lazy var eightButton = createButton(with: "8", titleColor: .white, backgroundColor: .darkGray)
-    private lazy var fiveButton = createButton(with: "5", titleColor: .white, backgroundColor: .darkGray)
-    private lazy var twoButton = createButton(with: "2", titleColor: .white, backgroundColor: .darkGray)
+    private lazy var plusMinusButton = createButton(with: "+/-",
+                                                    titleColor: .black,
+                                                    backgroundColor: .gray)
+    private lazy var eightButton = createButton(with: "8")
+    private lazy var fiveButton = createButton(with: "5")
+    private lazy var twoButton = createButton(with: "2")
 
-    private lazy var dischargeButton = createButton(with: "AC", titleColor: .black, backgroundColor: .gray)
-    private lazy var sevenButton = createButton(with: "7", titleColor: .white, backgroundColor: .darkGray)
-    private lazy var fourButton = createButton(with: "4", titleColor: .white, backgroundColor: .darkGray)
-    private lazy var oneButton = createButton(with: "1", titleColor: .white, backgroundColor: .darkGray)
+    private lazy var dischargeButton = createButton(with: "AC",
+                                                    titleColor: .black,
+                                                    backgroundColor: .gray)
+    private lazy var sevenButton = createButton(with: "7")
+    private lazy var fourButton = createButton(with: "4")
+    private lazy var oneButton = createButton(with: "1")
 
-    private lazy var zeroButton = createButton(with: "0", titleColor: .white, backgroundColor: .darkGray)
-
+    private lazy var zeroButton = createButton(with: "0")
 
     // MARK: - Lifecycle
 
@@ -55,35 +61,15 @@ class ConstreitViewController: UIViewController {
     // MARK: - Settings
 
     private func setupHierarchy() {
-        view.addSubview(label)
-
-        view.addSubview(divisionButton)
-        view.addSubview(multiplyButton)
-        view.addSubview(subtractionButton)
-        view.addSubview(additionButton)
-        view.addSubview(equalityButton)
-
-        view.addSubview(percentButton)
-        view.addSubview(nineButton)
-        view.addSubview(sixButton)
-        view.addSubview(threeButton)
-        view.addSubview(commaButton)
-
-        view.addSubview(plusMinusButton)
-        view.addSubview(eightButton)
-        view.addSubview(fiveButton)
-        view.addSubview(twoButton)
-
-        view.addSubview(dischargeButton)
-        view.addSubview(sevenButton)
-        view.addSubview(fourButton)
-        view.addSubview(oneButton)
-
-        view.addSubview(zeroButton)
+        view.addSubviews(label, divisionButton, multiplyButton, subtractionButton,
+                         additionButton, equalityButton, percentButton,
+                         nineButton, sixButton, threeButton, commaButton,
+                         plusMinusButton, eightButton, fiveButton, twoButton,
+                         dischargeButton, sevenButton, fourButton, oneButton,
+                         zeroButton)
     }
 
     private func setupLayout() {
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Metric.fourColumnRightAnchor).isActive = true
         label.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.oneLineBottomAnchor).isActive = true
 
@@ -134,15 +120,13 @@ class ConstreitViewController: UIViewController {
 
     private func setupView() {
         view.backgroundColor = .black
-
     }
 
+    // MARK: - Private functions
 
-
-
-    //MARK: - Private functions
-
-    private func createButton(with title: String, titleColor: UIColor, backgroundColor: UIColor) -> UIButton {
+    private func createButton(with title: String,
+                              titleColor: UIColor = .white,
+                              backgroundColor: UIColor = .darkGray) -> UIButton {
         let button = UIButton(type: .system)
 
         button.setTitle(title, for: .normal)
@@ -157,22 +141,13 @@ class ConstreitViewController: UIViewController {
         button.widthAnchor.constraint(equalToConstant: Metric.buttonWidth).isActive = true
         button.heightAnchor.constraint(equalToConstant: Metric.buttonHeight).isActive = true
 
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-
         return button
     }
-
-    // MARK: - Actions
-
-    @objc private func buttonAction() {
-
-    }
-
 }
 
 // MARK: - Constants
 
-extension ConstreitViewController {
+extension ConstraintViewController {
 
     enum Metric {
         static let fourColumnRightAnchor: CGFloat = -15
