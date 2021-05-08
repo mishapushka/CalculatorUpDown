@@ -112,12 +112,9 @@ class ConstraintViewController: UIViewController {
         oneButton.addConstraints(right: view.rightAnchor, paddingRight: Metric.oneColumnRightAnchor,
                                  bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.fiveLineBottomAnchor)
 
-        zeroButton.addConstraints(leading: view.safeAreaLayoutGuide.leadingAnchor, paddingLeading: Metric.zeroLeadingAnchor,
-                                  trailing: view.safeAreaLayoutGuide.trailingAnchor, paddingTrailing: Metric.zeroTrailingAnchor,
-                                  bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.sixLineBottomAnchor)
-//        zeroButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Metric.zeroLeadingAnchor).isActive = true
-//        zeroButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: Metric.zeroTrailingAnchor).isActive = true
-//        zeroButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Metric.sixLineBottomAnchor).isActive = true
+        zeroButton.addConstraints(bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: Metric.sixLineBottomAnchor,
+                                  leading: view.safeAreaLayoutGuide.leadingAnchor, paddingLeading: Metric.zeroLeadingAnchor,
+                                  trailing: view.safeAreaLayoutGuide.trailingAnchor, paddingTrailing: Metric.zeroTrailingAnchor)
     }
 
     private func setupView() {

@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcy-8u-eIZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="fcy-8u-eIZ">
                                 <rect key="frame" x="18" y="267" width="378" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="13g-a6-73b"/>
@@ -321,10 +321,10 @@
             </objects>
             <point key="canvasLocation" x="-23.188405797101453" y="65.625"/>
         </scene>
-        <!--Constreit View Controller-->
+        <!--Constraint View Controller-->
         <scene sceneID="bv3-et-AfC">
             <objects>
-                <viewController id="5vY-fA-TDV" customClass="ConstreitViewController" customModule="CalculatorUpDown" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5vY-fA-TDV" customClass="ConstraintViewController" customModule="CalculatorUpDown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T88-V6-pBv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
